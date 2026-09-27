@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import os
 
 # =========================================================
 # KONFIGURASI HALAMAN
@@ -78,9 +77,7 @@ st.markdown("""
 
 @st.cache_resource
 def load_model():
-    model_path = os.path.join(os.path.dirname(__file__), "stress_level.pkl")
-
-    with open(model_path, "rb") as file:
+    with open("Kelompok_5_Psikologi/stress_level.pkl", "rb") as file:
         model = pickle.load(file)
 
     return model
