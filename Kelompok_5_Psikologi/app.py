@@ -256,7 +256,7 @@ div.stButton > button:hover {
 # =========================================================
 @st.cache_resource
 def load_model():
-    with open("stress_level.pkl", "rb") as file:
+    with open("Kelompok_5_Psikologi/stress_level.pkl", "rb") as file:
         return pickle.load(file)
 
 model = load_model()
