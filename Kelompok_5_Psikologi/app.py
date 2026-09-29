@@ -255,7 +255,8 @@ model = load_model()
 # SIDEBAR
 # =========================================================
 with st.sidebar:
-    st.markdown("## 🧠 Stress Predictor")
+    st.markdown("## 🌿 Stress Predictor")
+    st.markdown("<div style='text-align:center;font-size:42px;margin:8px 0;'>🌱</div>", unsafe_allow_html=True)
     st.caption("Machine Learning • Random Forest")
     st.divider()
 
@@ -273,8 +274,8 @@ with st.sidebar:
     st.markdown("🔴 **2 — Tinggi**")
 
     st.divider()
-    st.markdown("### 🎵 Study Mode")
-    st.caption("Putar playlist Spotify sambil mengisi data.")
+    st.markdown("### 🎵 Study Corner")
+    st.caption("Isi data sambil dengerin playlist favoritmu ✨")
     spotify_url = st.text_input(
         "Spotify Embed URL",
         value="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M",
