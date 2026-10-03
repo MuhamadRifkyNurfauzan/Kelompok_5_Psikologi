@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import joblIb
+import os
+
 
 # =========================================================
 # KONFIGURASI HALAMAN
@@ -281,10 +284,10 @@ hr { border-color: rgba(255,255,255,0.1) !important; }
 
 @st.cache_resource
 def load_model():
-    with open("stress_level.pkl", "rb") as file:
-        model = pickle.load(file)
+    model_path = os.path.join(os.path.dirname(__file__), "stress_level.pkl")
+    return joblib.load(model_path)
 
-    return model
+model = load_model()
 
 
 model = load_model()
